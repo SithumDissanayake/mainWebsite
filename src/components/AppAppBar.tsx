@@ -11,7 +11,6 @@ import MenuItem from '@mui/material/MenuItem';
 import Drawer from '@mui/material/Drawer';
 import MenuIcon from '@mui/icons-material/Menu';
 import CloseRoundedIcon from '@mui/icons-material/CloseRounded';
-import Sitemark from './SitemarkIcon.tsx';
 
 const StyledToolbar = styled(Toolbar)(({theme}) => ({
     display: 'flex',
@@ -34,33 +33,36 @@ export default function AppAppBar() {
         setOpen(newOpen);
     };
 
+    const handleScroll = () => {
+        const targetElement = document.getElementById('latestProjects');
+        if (targetElement) {
+            // Get the position of the element
+            const elementPosition = targetElement.getBoundingClientRect().top + window.pageYOffset;
+
+            // Set an offset (e.g., 100px more down from the center)
+            const offset = window.innerHeight / 2 - 200;
+
+            // Smoothly scroll to the element's position minus the offset
+            window.scrollTo({
+                top: elementPosition - offset,
+                behavior: 'smooth'
+            });
+        }
+    };
+
     return (
         <AppBar
             position="fixed"
-            sx={{boxShadow: 0, bgcolor: 'transparent', backgroundImage: 'none', mt: 10}}
+            sx={{boxShadow: 0, bgcolor: 'transparent', backgroundImage: 'none', mt: 6.5}}
         >
             <Container maxWidth="lg">
                 <StyledToolbar variant="dense" disableGutters>
                     <Box sx={{flexGrow: 1, display: 'flex', alignItems: 'center', px: 0}}>
-                        <Sitemark/>
                         <Box sx={{display: {xs: 'none', md: 'flex'}}}>
-                            <Button variant="text" color="info" size="small">
-                                Features
-                            </Button>
-                            <Button variant="text" color="info" size="small">
-                                Testimonials
-                            </Button>
-                            <Button variant="text" color="info" size="small">
-                                Highlights
-                            </Button>
-                            <Button variant="text" color="info" size="small">
-                                Pricing
-                            </Button>
-                            <Button variant="text" color="info" size="small" sx={{minWidth: 0}}>
-                                FAQ
-                            </Button>
-                            <Button variant="text" color="info" size="small" sx={{minWidth: 0}}>
-                                Blog
+                            <Button variant="text" color="info" size="small" onClick={handleScroll}
+                                    sx={{ fontSize: '1.10rem' }}
+                            >
+                                Latest Projects!
                             </Button>
                         </Box>
                     </Box>
@@ -71,11 +73,13 @@ export default function AppAppBar() {
                             alignItems: 'center',
                         }}
                     >
-                        <Button color="primary" variant="text" size="small">
-                            Sign in
-                        </Button>
-                        <Button color="primary" variant="contained" size="small">
-                            Sign up
+                        <Button color="primary"
+                                variant="contained"
+                                size="small"
+                                href="mailto:contact@sithumd.com?subject=🖐️ Hi Sithum, I'd like to hire you!"
+                                sx={{ fontSize: '1.10rem' }}
+                        >
+                            Contact Me!
                         </Button>
                     </Box>
                     <Box sx={{display: {sm: 'flex', md: 'none'}}}>
@@ -103,13 +107,13 @@ export default function AppAppBar() {
                                 <MenuItem>FAQ</MenuItem>
                                 <MenuItem>Blog</MenuItem>
                                 <MenuItem>
-                                    <Button color="primary" variant="contained" fullWidth>
-                                        Sign up
-                                    </Button>
-                                </MenuItem>
-                                <MenuItem>
-                                    <Button color="primary" variant="outlined" fullWidth>
-                                        Sign in
+                                    <Button
+                                        color="primary"
+                                        variant="outlined"
+                                        href="mailto:contact@sithumd.com?subject=🖐️ Hi Sithum, I'd like to hire you!"
+                                        fullWidth
+                                    >
+                                        Contact Me!
                                     </Button>
                                 </MenuItem>
                             </Box>

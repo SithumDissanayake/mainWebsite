@@ -17,7 +17,6 @@ import studentsChoice from '../assets/studentsChoice.png';
 import me from '../assets/me.jpg';
 import left from '../assets/left.png';
 import right from '../assets/right.png';
-import Button from "@mui/material/Button";
 
 const cardData = [
     {
@@ -129,15 +128,6 @@ export default function MainContent() {
 
                 }}
             >
-                {/* Contact Me Button */}
-                <Button
-                    variant="contained"
-                    color="primary"
-                    sx={{position: 'absolute', top: 16, right: 16}}
-                    href="mailto:contact@sithumd.com?subject=🖐️ Hi Sithum, I'd like to hire you!"
-                >
-                    Contact Me
-                </Button>
 
                 {/* Left Image */}
                 <Box
@@ -175,11 +165,11 @@ export default function MainContent() {
                     src={me} // You can replace with your desired image
                     alt="Centered Image"
                     sx={{
-                        width: {xs: '80%', md: '40%'},
+                        width: {xs: '80%', md: '35%'},
                         border: '20px solid',
                         borderColor: '#5CC8FF',
                         borderRadius: '50%',
-                        marginTop: -15,
+                        marginTop: -5,
                         marginBottom: 5,
                     }}
                 />
@@ -199,7 +189,7 @@ export default function MainContent() {
                     boxShadow: 5, // Optional: Add shadow for a bit of depth
                 }}
             >
-            <div>
+            <div id={"latestProjects"}>
                 <Typography variant="h2" gutterBottom style={{ color: 'white' }}>
                     Latest Projects!
                 </Typography>

@@ -5,6 +5,7 @@ import {createTheme, PaletteMode, ThemeProvider} from '@mui/material/styles';
 import MainContent from './components/MainContent';
 // import Latest from './components/Latest';
 import Footer from './components/Footer';
+import AppAppBar from "./components/AppAppBar.tsx";
 
 // import getBlogTheme from './theme/getBlogTheme';
 
@@ -73,6 +74,8 @@ export default function Blog() {
                     },
                 }}
             >
+                <AppAppBar />
+
                 <MainContent/>
                 {/*<Latest />*/}
             </Container>
