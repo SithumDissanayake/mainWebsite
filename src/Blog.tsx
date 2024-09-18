@@ -11,8 +11,9 @@ import Footer from './components/Footer';
 export default function Blog() {
     const [mode] = React.useState<PaletteMode>('light');
     // const blogTheme = createTheme(getBlogTheme(mode));
-    const defaultTheme = createTheme({ palette: {
-        mode,
+    const defaultTheme = createTheme({
+        palette: {
+            mode,
             primary: {
                 main: '#343633',
                 // light: will be calculated from palette.primary.main,
@@ -25,7 +26,13 @@ export default function Blog() {
                 // dark: will be calculated from palette.secondary.main,
                 contrastText: '#93867F',
             },
-        } });
+        },
+        typography: {
+            allVariants: {
+                fontFamily: `"Bangers", system-ui`,
+},
+        },
+    });
 
     // This code only runs on the client side, to determine the system color preference
     // React.useEffect(() => {
