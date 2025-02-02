@@ -2,6 +2,7 @@
 "use client";
 
 import React from "react";
+import Image from "next/image";
 
 interface ProjectCardProps {
     image: string;
@@ -18,7 +19,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ image, title, description, we
             rel="noopener noreferrer"
             className="group block max-w-sm bg-white text-black rounded-lg shadow-md overflow-hidden transform transition duration-300 hover:scale-105 hover:shadow-xl cursor-pointer"
         >
-            <img src={image} alt={title} className="w-full h-48 object-cover" />
+            <Image src={image} alt={title} width={800} height={450} className="w-full h-48 object-cover" />
             <div className="p-4 h-40 relative flex flex-col">
                 <h3 className="text-xl font-bold mb-2">{title}</h3>
                 <div className="relative h-20 overflow-hidden">

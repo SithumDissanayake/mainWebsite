@@ -1,6 +1,6 @@
 export default function Footer() {
     return (
-        <footer className="absolute bottom-4 text-sm text-gray-200">
+        <footer className="py-4 text-sm text-center bg-transparent">
             © {new Date().getFullYear()} Sithum Dissanayake. All rights reserved.
         </footer>
     );

@@ -16,7 +16,7 @@ export default function ProjectsPage() {
         },
         {
             id: 2,
-            image: "assets/flowcoding.png",
+            image: "/assets/flowcoding.png",
             title: "Flow Coding",
             website: "https://flowcoding.sithumd.com/",
             description:
@@ -49,6 +49,7 @@ export default function ProjectsPage() {
                     ))}
                 </div>
             </section>
+
             <Footer />
         </main>
     );
