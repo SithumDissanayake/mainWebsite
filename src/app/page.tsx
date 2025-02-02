@@ -1,37 +1,87 @@
 import Link from "next/link";
+import Image from "next/image";
+import { Github, Linkedin, Mail } from "lucide-react";
+import Navbar from "~/components/navbar";
+import Footer from "~/components/footer";
 
 export default function HomePage() {
-  return (
-    <main className="flex min-h-screen flex-col items-center justify-center bg-gradient-to-b from-[#2e026d] to-[#15162c] text-white">
-      <div className="container flex flex-col items-center justify-center gap-12 px-4 py-16">
-        <h1 className="text-5xl font-extrabold tracking-tight text-white sm:text-[5rem]">
-          Create <span className="text-[hsl(280,100%,70%)]">T3</span> App
-        </h1>
-        <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 md:gap-8">
-          <Link
-            className="flex max-w-xs flex-col gap-4 rounded-xl bg-white/10 p-4 text-white hover:bg-white/20"
-            href="https://create.t3.gg/en/usage/first-steps"
-            target="_blank"
-          >
-            <h3 className="text-2xl font-bold">First Steps →</h3>
-            <div className="text-lg">
-              Just the basics - Everything you need to know to set up your
-              database and authentication.
+    return (
+        <main className="relative flex min-h-screen flex-col items-center justify-center bg-gradient-to-b from-[#80DED9] to-[#53599A] text-white">
+            <Navbar />
+
+            {/* Hero Section */}
+            <section className="relative z-10 container mx-auto flex w-full flex-col items-center justify-between gap-12 px-4 pt-20 md:flex-row">
+                <div className="flex-1 text-center md:text-left">
+                    <h2 className="mb-6 text-xl font-medium uppercase tracking-widest text-[#AEECEF]">
+                        Software Engineer
+                    </h2>
+                    <h1 className="mb-8 text-5xl font-extrabold tracking-tight text-white sm:text-[5rem]">
+                        <span className="text-[#AEECEF]">Sithum</span> Dissanayake
+                    </h1>
+                    <p className="mb-12 max-w-2xl text-lg text-white/90">
+                        Crafting elegant solutions through code. Specialized in building
+                        exceptional digital experiences that combine innovation with
+                        user-centric design.
+                    </p>
+                    <div className="flex justify-center gap-6 md:justify-start">
+                        <Link
+                            href="https://github.com/SithumDissanayake"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            aria-label="GitHub Profile"
+                            className="rounded-full bg-white/10 p-3 transition-colors hover:bg-white/20"
+                        >
+                            <Github className="h-6 w-6" />
+                        </Link>
+                        <Link
+                            href="https://www.linkedin.com/in/sithum-dissanayake/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            aria-label="LinkedIn Profile"
+                            className="rounded-full bg-white/10 p-3 transition-colors hover:bg-white/20"
+                        >
+                            <Linkedin className="h-6 w-6" />
+                        </Link>
+                        <Link
+                            href="mailto:contact@sithumd.com"
+                            aria-label="Send Email"
+                            className="rounded-full bg-white/10 p-3 transition-colors hover:bg-white/20"
+                        >
+                            <Mail className="h-6 w-6" />
+                        </Link>
+                    </div>
+                </div>
+                <div className="flex-1">
+                    <div className="relative mx-auto w-72 h-72 md:w-[400px] md:h-[400px]">
+                        <div
+                            className="absolute inset-0 rounded-full bg-[#AEECEF] blur-2xl opacity-20"
+                            aria-hidden="true"
+                        ></div>
+                        <Image
+                            src="/assets/me.jpg"
+                            alt="Sithum Dissanayake"
+                            width={400}
+                            height={400}
+                            className="relative z-10 rounded-full border-4 border-white/10 object-cover shadow-2xl"
+                            priority
+                        />
+                    </div>
+                </div>
+            </section>
+
+            {/* Background Decoration */}
+            <div className="pointer-events-none absolute inset-0 overflow-hidden">
+                <div
+                    className="absolute -top-1/2 -right-1/2 w-[800px] h-[800px] rounded-full bg-[#AEECEF]/10 blur-3xl"
+                    aria-hidden="true"
+                ></div>
+                <div
+                    className="absolute -bottom-1/2 -left-1/2 w-[600px] h-[600px] rounded-full bg-[#068D9D]/20 blur-3xl"
+                    aria-hidden="true"
+                ></div>
             </div>
-          </Link>
-          <Link
-            className="flex max-w-xs flex-col gap-4 rounded-xl bg-white/10 p-4 text-white hover:bg-white/20"
-            href="https://create.t3.gg/en/introduction"
-            target="_blank"
-          >
-            <h3 className="text-2xl font-bold">Documentation →</h3>
-            <div className="text-lg">
-              Learn more about Create T3 App, the libraries it uses, and how to
-              deploy it.
-            </div>
-          </Link>
-        </div>
-      </div>
-    </main>
-  );
+
+            <Footer />
+        </main>
+    );
 }
