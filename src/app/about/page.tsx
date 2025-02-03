@@ -16,15 +16,14 @@ export default function AboutPage() {
                     <div className="text-center space-y-6">
                         <h1 className="text-4xl font-bold tracking-tight">About Me</h1>
                         <p className="text-lg text-white/90">
-                            Hi there! I&#39;m Sithum Dissanayake, a passionate developer with a
-                            love for building innovations and engaging digital experiences!
+                            Hi there! I&#39;m Sithum Dissanayake, a passionate full stack developer with a strong background in software engineering, honed during my Bachelor of Engineering (Honours) at the Australian National University. That experience not only equipped me with solid technical foundations but also immersed me in Agile Scrum methodologies, ensuring that I thrive in collaborative, fast-paced environments.
                         </p>
                         <p className="text-lg text-white/90">
-                            I&#39;m always on the lookout for new opportunities and
-                            collaborations. Feel free to reach out via any of the platforms below
-                            or get in touch directly!
+                            With years of industry experience under my belt, I leverage practical, hands-on judgment to tackle complex problems from multiple perspectives—always seeking the most effective and innovative solution. My approach to software development involves breaking down systems into manageable sub-systems, allowing for independent testing, scaling, and seamless integration. This strategy aligns perfectly with microservices-based architectures and modern development practices.
                         </p>
-
+                        <p className="text-lg text-white/90">
+                            In every project, I maintain comprehensive documentation for code, processes, and platforms, ensuring transparency and ease of collaboration with technical partners and sub-contracts alike. I&#39;m committed to driving ideas from conception to market-ready products, consistently delivering quality outcomes as part of a driven, forward-thinking team.
+                        </p>
                         {/* Social Icons */}
                         <div className="flex justify-center gap-6 pt-4">
                             <Link

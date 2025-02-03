@@ -22,9 +22,7 @@ export default function HomePage() {
                             <span className="text-[#AEECEF]">Sithum</span> Dissanayake
                         </h1>
                         <p className="mb-12 text-lg text-white/90">
-                            Crafting elegant solutions through code. Specialized in building
-                            exceptional digital experiences that combine innovation with
-                            user-centric design.
+                            A 1% improvement everyday means a 365% improvement yearly
                         </p>
                         <div className="flex justify-center gap-6 md:justify-start">
                             <Link
